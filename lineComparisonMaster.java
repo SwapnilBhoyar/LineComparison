@@ -15,11 +15,15 @@ public class lineComparisonMaster{
 		double length=lf.getLineLength(x1,x2,y1,y2);
 		double length1=lf.getLineLength(x11,x12,y11,y12);
 
-		if(String.valueOf(length).equals(String.valueOf(length1))){
-			System.out.println("Lines are equal");
+		int result=Double.valueOf(length).compareTo(Double.valueOf(length1));
+		if(result>=1){
+			System.out.println("line1 is greater than line2");
+		}
+		else if(result<0){
+			System.out.println("line1 is less than line2");
 		}
 		else
-			System.out.println("Lines are not equal");
+			System.out.println("Lines are equal");
 	}
 }
 class lineFunction{
