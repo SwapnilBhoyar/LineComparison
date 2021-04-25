@@ -1,5 +1,5 @@
 import java.io.*;
-import java.lang.Math;
+import java.lang.*;
 public class lineComparisonMaster{
 	public static void main(String args[]){
 		System.out.println("Wellcome To Line Comparison Computation Program On Master Branch");
@@ -8,14 +8,24 @@ public class lineComparisonMaster{
 		int x2=lf.getLineValue();
 		int y1=lf.getLineValue();
 		int y2=lf.getLineValue();
+		int x11=lf.getLineValue();
+                int x12=lf.getLineValue();
+                int y11=lf.getLineValue();
+                int y12=lf.getLineValue();
 		double length=lf.getLineLength(x1,x2,y1,y2);
-		System.out.println("length:"+length);
+		double length1=lf.getLineLength(x11,x12,y11,y12);
+
+		if(String.valueOf(length).equals(String.valueOf(length1))){
+			System.out.println("Lines are equal");
+		}
+		else
+			System.out.println("Lines are not equal");
 	}
 }
 class lineFunction{
 
 	int getLineValue(){
-        	int value=(int)(Math.random()*100);
+        	int value=(int)(Math.random()*10);
         	return value;
         }
 
